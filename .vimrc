@@ -14,6 +14,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'majutsushi/tagbar'
 Plugin 'Syntastic'
+Plugin 'flazz/vim-colorschemes'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -85,7 +86,7 @@ nmap <F3> :TagbarToggle<CR>
 "Others
 syntax enable
 set title
-colorscheme solarized
+colorscheme molokai 
 set mouse=a
 set number
 set nowrap
