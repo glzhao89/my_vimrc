@@ -44,7 +44,8 @@ noremap <silent>,n :nohls<CR>
 syntax enable
 set title
 colorscheme Monokai
-set mouse=a
+"disable mouse so copy will work on selection
+set mouse-=a
 set number
 set nowrap
 set cursorline
