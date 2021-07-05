@@ -31,6 +31,7 @@ nmap <F3> :TagbarToggle<CR>
 
 "CLear highlighting <,+n>
 "noremap <silent><leader>/ :nohls<CR>
+"noremap <LEADER>n :nohl<CR>
 noremap <silent>,n :nohls<CR>
 
 "NerdTree
@@ -38,6 +39,12 @@ noremap <silent>,n :nohls<CR>
 "nnoremap <C-n> :NERDTree<CR>
 "nnoremap <C-t> :NERDTreeToggle<CR>
 "nnoremap <C-f> :NERDTreeFind<CR>
+
+"Code block jump settings
+map [[ ?{<CR>w99[{
+map ][ /}<CR>b99]}
+map ]] j0[[%/{<CR>
+map [] k$][%?}<CR>
 
 
 "Others
