@@ -1,8 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
 syntax on
 filetype plugin indent on
-
 
 "Pathogen config
 execute pathogen#infect()
@@ -41,6 +38,7 @@ noremap <silent>,n :nohls<CR>
 "nnoremap <C-f> :NERDTreeFind<CR>
 
 "Code block jump settings
+"and cancel highlighting of {} after
 map [[ ?{<CR>w99[{
 map ][ /}<CR>b99]}
 map ]] j0[[%/{<CR>
@@ -58,13 +56,18 @@ set nowrap
 set cursorline
 set tabstop=4
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set smartindent
 set wildmenu
 set lazyredraw
 set showmatch
-set incsearch 
+set incsearch
 set hlsearch
 "Highlight search color config
 hi Search term=standout cterm=bold ctermfg=7 ctermbg=3
+
+"Highlight extra white spaces at begin/end of line
+highlight ExtraWhitespace ctermbg=red guibg=darkgreen
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t/
