@@ -1,12 +1,16 @@
 #!/bin/bash
 
+HOME_DIR=`echo $HOME`
+VIM_DIR=$HOME_DIR/.vim
+PLUGIN_DIR=$VIM_DIR/plugin
+echo $PLUGIN_DIR
 #copy .vimrc
-cp .vimrc ~/.vim/
+cp .vimrc $VIM_DIR
 
 #copy cscope key map
-mkdir -p ~/.vim/plugin copy cscope_maps.vim
+mkdir -p $PLUGIN_DIR && cp cscope_maps.vim $PLUGIN_DIR
 
 #install pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p $VIM_DIR/autoload $VIM_DIR/bundle && \
+curl -LSso $VIM_DIR/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
