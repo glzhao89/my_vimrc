@@ -1,7 +1,5 @@
 syntax on
 filetype plugin indent on
-
-"Pathogen config
 execute pathogen#infect()
 
 
@@ -21,10 +19,15 @@ let g:solarized_contrast  = "high"
 let g:solarized_visibility=  "high"
 
 "Tarbar config
-let g:tagbar_width=35
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_width=25
 let g:tagbar_autofocus=1
 let g:tagbar_left = 0
-nmap <F3> :TagbarToggle<CR>
+let g:tagbar_sort = 0
+let g:tagbar_show_data_type=0
+"autocmd VimEnter * nested :TagbarOpen
+"autocmd FileType c,cpp nested :TagbarOpen
+nmap <C-b> :TagbarToggle<CR>
 
 "CLear highlighting <,+n>
 "noremap <silent><leader>/ :nohls<CR>
@@ -32,10 +35,16 @@ nmap <F3> :TagbarToggle<CR>
 noremap <silent>,n :nohls<CR>
 
 "NerdTree
-"nnoremap <leader>n :NERDTreeFocus<CR>
-"nnoremap <C-n> :NERDTree<CR>
-"nnoremap <C-t> :NERDTreeToggle<CR>
-"nnoremap <C-f> :NERDTreeFind<CR>
+let g:NERDTreeWinSize=25
+" Start NERDTree and leave the cursor in it.
+"autocmd VimEnter * NERDTree
+"Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+nnoremap <C-m> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 "Code block jump settings
 "and cancel highlighting of {} after
@@ -55,7 +64,7 @@ set number
 set nowrap
 set cursorline
 set tabstop=4
-set softtabstop=4
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
