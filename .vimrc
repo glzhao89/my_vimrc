@@ -48,10 +48,15 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 "Code block jump settings
 "and cancel highlighting of {} after
-map [[ ?{<CR>w99[{
-map ][ /}<CR>b99]}
-map ]] j0[[%/{<CR>
-map [] k$][%?}<CR>
+"map [[ ?{<CR>w99[{
+"map ][ /}<CR>b99]}
+"map ]] j0[[%/{<CR>
+"map [] k$][%?}<CR>
+
+map [[ :silent! eval search('{', 'b')<CR>w99[{
+map ][ :silent! eval search('}')<CR>b99]}
+map ]] j0[[%:silent! eval search('{')<CR>
+map [] k$][%:silent! eval search('}', 'b')<CR>
 
 
 "Others
