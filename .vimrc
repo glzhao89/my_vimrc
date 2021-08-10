@@ -86,5 +86,5 @@ highlight ExtraWhitespace ctermbg=red guibg=darkgreen
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-"Set customized file type
+"Set customized file type highlighting syntax
 autocmd BufNewFile,BufRead *.sim set syntax=sh
