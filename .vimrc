@@ -39,7 +39,7 @@ let g:NERDTreeWinSize=25
 " Start NERDTree and leave the cursor in it.
 "autocmd VimEnter * NERDTree
 "Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 nnoremap <C-m> :NERDTreeFocus<CR>
@@ -85,3 +85,6 @@ hi Search term=standout cterm=bold ctermfg=7 ctermbg=3
 highlight ExtraWhitespace ctermbg=red guibg=darkgreen
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+"Set customized file type
+autocmd BufNewFile,BufRead *.sim set syntax=sh
