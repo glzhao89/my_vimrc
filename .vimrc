@@ -33,6 +33,9 @@ nmap <C-b> :TagbarToggle<CR>
 "noremap <silent><leader>/ :nohls<CR>
 "noremap <LEADER>n :nohl<CR>
 noremap <silent>,n :nohls<CR>
+"highlight using * without jump to next
+nnoremap * *``
+nnoremap * :keepjumps normal! mi*`i<CR>
 
 "NerdTree
 let g:NERDTreeWinSize=25
@@ -58,6 +61,9 @@ map ][ :silent! eval search('}')<CR>b99]}
 map ]] j0[[%:silent! eval search('{')<CR>
 map [] k$][%:silent! eval search('}', 'b')<CR>
 
+"repeat previous command
+"noremap <C-P> @:<CR>
+noremap <C-P> @:
 
 "Others
 syntax enable
@@ -88,3 +94,4 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 "Set customized file type highlighting syntax
 autocmd BufNewFile,BufRead *.sim set syntax=sh
+
