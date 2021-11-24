@@ -48,6 +48,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap <C-m> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+"YouCompleteMe
+let g:ycm_global_ycm_extra_conf='/home/gavin/.vim/bundle/youcompleteme/third_party/ycmd/examples/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_show_diagnostics_ui = 0
 
 "Code block jump settings
 "and cancel highlighting of {} after
@@ -94,4 +98,3 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 "Set customized file type highlighting syntax
 autocmd BufNewFile,BufRead *.sim set syntax=sh
-
