@@ -7,8 +7,12 @@ echo $PLUGIN_DIR
 #copy .vimrc
 cp .vimrc $HOME_DIR
 
+mkdir -p $PLUGIN_DIR
 #copy cscope key map
-mkdir -p $PLUGIN_DIR && cp cscope_maps.vim $PLUGIN_DIR
+cp cscope_maps.vim $PLUGIN_DIR
+
+#copy YCP config
+cp .ycm_extra_conf.py $PLUGIN_DIR
 
 #install pathogen
 mkdir -p $VIM_DIR/autoload $VIM_DIR/bundle && \
