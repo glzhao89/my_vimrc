@@ -75,6 +75,8 @@ let g:ycm_filetype_whitelist = {
 			\ "zimbu":1,
 			\ }
 set completeopt=menu,menuone
+nnoremap <C-Z> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-X> :YcmCompleter GetType<CR>
 
 "Code block jump settings
 "and cancel highlighting of {} after
