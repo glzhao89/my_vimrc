@@ -66,18 +66,18 @@ let g:ycm_min_num_identifier_candidate_chars = 2
 "let g:ycm_collect_identifiers_from_comments_and_strings = 1
 "let g:ycm_complete_in_strings=1
 let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
+            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+            \ 'cs,lua,javascript': ['re!\w{2}'],
+            \ }
 let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "cpp":1,
-			\ "objc":1,
-			\ "sh":1,
-			\ "zsh":1,
-			\ "zimbu":1,
-			\ "python":1,
-			\ }
+            \ "c":1,
+            \ "cpp":1,
+            \ "objc":1,
+            \ "sh":1,
+            \ "zsh":1,
+            \ "zimbu":1,
+            \ "python":1,
+            \ }
 set completeopt=menu,menuone
 nnoremap <C-Z> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <C-X> :YcmCompleter GetType<CR>
@@ -132,3 +132,4 @@ autocmd BufNewFile,BufRead *.sim set syntax=sh
 "Set pop up menu color
 highlight Pmenu ctermfg=blue ctermbg=black
 highlight PmenuSel ctermfg=white ctermbg=black
+
