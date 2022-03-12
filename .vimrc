@@ -132,4 +132,3 @@ autocmd BufNewFile,BufRead *.sim set syntax=sh
 "Set pop up menu color
 highlight Pmenu ctermfg=blue ctermbg=black
 highlight PmenuSel ctermfg=white ctermbg=black
-
