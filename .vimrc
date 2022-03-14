@@ -101,7 +101,6 @@ noremap <C-P> @:
 "Others
 syntax enable
 set title
-"colorscheme Monokai
 colorscheme monokain
 "disable mouse so copy will work on selection
 set mouse-=a
