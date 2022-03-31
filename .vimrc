@@ -109,11 +109,13 @@ set nowrap
 set cursorline
 set tabstop=4
 set softtabstop=2
+"use << or >> or == indent characters
 set shiftwidth=2
 set expandtab
 set smartindent
 set wildmenu
 set lazyredraw
+set autochdir
 set showmatch
 set incsearch
 set hlsearch
