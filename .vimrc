@@ -115,7 +115,7 @@ set expandtab
 set smartindent
 set wildmenu
 set lazyredraw
-set autochdir
+"set autochdir "disable this for ctags to work
 set showmatch
 set incsearch
 set hlsearch
