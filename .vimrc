@@ -119,6 +119,7 @@ set autochdir
 set showmatch
 set incsearch
 set hlsearch
+set splitright
 "Highlight search color config
 hi Search term=standout cterm=bold ctermfg=7 ctermbg=3
 
