@@ -7,7 +7,7 @@ execute pathogen#infect()
 if has('gui_running')
     set background=light
 else
-     set background=dark
+    set background=dark
 endif
 let g:solarized_termcolors = 256
 let g:solarized_termtrans = 0
@@ -48,6 +48,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap <C-m> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+"coc.vim
+let g:coc_start_at_startup = v:false
 
 "YouCompleteMe
 "let g:ycm_global_ycm_extra_conf='/home/gavin/.vim/bundle/youcompleteme/third_party/ycmd/examples/.ycm_extra_conf.py'
