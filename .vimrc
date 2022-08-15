@@ -99,7 +99,10 @@ map [] k$][%:silent! eval search('}', 'b')<CR>
 
 "repeat previous command
 "noremap <C-P> @:<CR>
-noremap <C-P> @:
+noremap <C-P> :@:<CR>
+
+"remove trailing white spaces
+noremap <C-O> :%s/\s\+$//e<CR>
 
 "Others
 syntax enable
