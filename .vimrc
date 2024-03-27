@@ -111,7 +111,7 @@ colorscheme monokain
 "disable mouse so copy will work on selection
 set mouse-=a
 set number
-set nowrap
+set wrap
 set cursorline
 set tabstop=4
 set softtabstop=2
